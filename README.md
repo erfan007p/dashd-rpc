@@ -1,35 +1,35 @@
-# dashd-rpc
+# gobyted-rpc
 
-[![Build Status](https://github.com/dashevo/dashd-rpc/actions/workflows/test.yml/badge.svg)](https://github.com/dashevo/dashd-rpc/actions/workflows/test.yml)
-[![NPM Package](https://img.shields.io/npm/v/@dashevo/dashd-rpc.svg)](https://www.npmjs.org/package/@dashevo/dashd-rpc)
+[![Build Status](https://github.com/gobytecoin/gobyted-rpc/actions/workflows/test.yml/badge.svg)](https://github.com/gobytecoin/gobyted-rpc/actions/workflows/test.yml)
+[![NPM Package](https://img.shields.io/npm/v/@gobytecoin/gobyted-rpc.svg)](https://www.npmjs.org/package/@gobytecoin/gobyted-rpc)
 
-Dash Client Library to connect to Dash Core (dashd) via RPC
+GoByte Client Library to connect to GoByte Core (gobyted) via RPC
 
 ## Install
 
-dashd-rpc runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
+gobyted-rpc runs on [node](http://nodejs.org/), and can be installed via [npm](https://npmjs.org/):
 
 ```bash
-npm install @dashevo/dashd-rpc
+npm install @gobytecoin/gobyted-rpc
 ```
 
 ## Usage
 
 ### RpcClient
 
-Config parameters : 
+Config parameters :
 
 	- protocol : (string - optional) - (default: 'https') - Set the protocol to be used. Either `http` or `https`.
 	- user : (string - optional) - (default: 'user') - Set the user credential.
 	- pass : (string - optional) - (default: 'pass') - Set the password credential.
 	- host : (string - optional) - (default: '127.0.0.1') - The host you want to connect with.
-	- port : (integer - optional) - (default: 9998) - Set the port on which perform the RPC command.
+	- port : (integer - optional) - (default: 12454) - Set the port on which perform the RPC command.
 
 Promise vs callback based
 
-  - `require('@dashevo/dashd-rpc/promise')` to have promises returned
-  - `require('@dashevo/dashd-rpc')` to have callback functions returned
-	
+  - `require('@gobytecoin/gobyted-rpc/promise')` to have promises returned
+  - `require('@gobytecoin/gobyted-rpc')` to have callback functions returned
+
 ### Examples
 
 Config:
@@ -37,17 +37,17 @@ Config:
 ```javascript
 var config = {
     protocol: 'http',
-    user: 'dash',
+    user: 'gobyte',
     pass: 'local321',
     host: '127.0.0.1',
-    port: 19998
+    port: 13454
 };
 ```
 
 Promise based:
 
 ```javascript
-var RpcClient = require('@dashevo/dashd-rpc/promise');
+var RpcClient = require('@gobytecoin/gobyted-rpc/promise');
 var rpc = new RpcClient(config);
 
 rpc.getRawMemPool()
@@ -68,8 +68,8 @@ Callback based (legacy):
 
 ```javascript
 var run = function() {
-  var bitcore = require('@dashevo/dashcore-lib');
-  var RpcClient = require('@dashevo/dashd-rpc');
+  var bitcore = require('@gobytecoin/gobytecore-lib');
+  var RpcClient = require('@gobytecoin/gobyted-rpc');
   var rpc = new RpcClient(config);
 
   var txids = [];
@@ -115,13 +115,13 @@ var run = function() {
 You can dynamically access to the help of each method by doing
 
 ```
-const RpcClient = require('@dashevo/dashd-rpc');
+const RpcClient = require('@gobytecoin/gobyted-rpc');
 var client = new RPCclient({
     protocol:'http',
-    user: 'dash',
-    pass: 'local321', 
-    host: '127.0.0.1', 
-    port: 19998
+    user: 'gobyte',
+    pass: 'local321',
+    host: '127.0.0.1',
+    port: 13454
 });
 
 var cb = function (err, data) {
@@ -137,8 +137,9 @@ client.help('getinfo',cb);
 
 ## Contributing
 
-Feel free to dive in! [Open an issue](https://github.com/dashevo/dash-std-template/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/gobytecoin/gobyted-rpc/issues/new) or submit PRs.
 
 ## License
 
 [MIT](LICENSE) &copy; Dash Core Group, Inc.
+[MIT](LICENSE) &copy; GoByte Core Group, Inc.

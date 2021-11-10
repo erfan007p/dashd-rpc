@@ -1,6 +1,6 @@
 {
-  "name": "@dashevo/dashd-rpc",
-  "description": "Dash Client Library to connect to Dash Core (dashd) via RPC",
+  "name": "@gobytecoin/gobyted-rpc",
+  "description": "GoByte Client Library to connect to GoByte Core (gobyted) via RPC",
   "version": "2.3.1",
   "author": {
     "name": "Stephen Pair",
@@ -26,15 +26,20 @@
     {
       "name": "Alex Werner",
       "email": "alex.werner@dash.org"
+    },
+    {
+      "name": "Aliyul Erfan",
+      "email": "erfan007p@gmail.com"
     }
   ],
   "keywords": [
-    "dash",
+    "gobyte",
+    "gbx",
     "rpc"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/dashd-rpc"
+    "url": "https://github.com/gobytecoin/gobyted-rpc"
   },
   "license": "MIT",
   "main": "lib/index.js",
@@ -56,7 +61,7 @@
     "sinon": "^9.2.2"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/dashd-rpc/issues"
+    "url": "https://github.com/gobytecoin/gobyted-rpc/issues"
   },
-  "homepage": "https://github.com/dashevo/dashd-rpc"
+  "homepage": "https://github.com/gobytecoin/gobyted-rpc"
 }
